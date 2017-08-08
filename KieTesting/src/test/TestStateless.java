@@ -11,7 +11,7 @@ import webservice.CallKie;
 public class TestStateless {
 	
 	private static final String sessionName = "kieSessionStateless";
-	private static final String containerName = "kieContainer";
+	private static final String containerName = "KieContainer";
 	private static MyObject getMyObject() {
 
 		MyObject myObject = new MyObject();

@@ -21,9 +21,9 @@ public class TestProcess {
 		List<Object> objects = new ArrayList<Object>();
 		objects.add(myObject);
 		
-		String sessionName = "kieSessionStateful";
+		String sessionName = "kieSessionProcessStateful";
 		String processID = "myProject.MyFirstProcess";
-		String containerName = "kieContainer";
+		String containerName = "KieContainer";
 
 		CallKie.executeProcess(containerName, classNames, objects, sessionName, processID);
 	}
