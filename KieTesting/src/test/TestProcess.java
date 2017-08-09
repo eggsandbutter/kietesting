@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Test;
@@ -25,7 +26,9 @@ public class TestProcess {
 		String processID = "myProject.MyFirstProcess";
 		String containerName = "KieContainer";
 
-		CallKie.executeProcess(containerName, classNames, objects, sessionName, processID);
+		HashMap<String, Object> globals = null;
+				
+		CallKie.executeProcess(containerName, sessionName, classNames, objects, globals, processID, CallKie.REST_JAXB);
 	}
 
 }

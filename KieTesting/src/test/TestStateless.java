@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Test;
@@ -32,7 +33,10 @@ public class TestStateless {
 		List<Object> objects = new ArrayList<Object>();
 		objects.add(myObject);
 		
-		CallKie.callWSJaxB(containerName, classNames, objects, sessionName);
+		HashMap<String, Object> globals = new HashMap<String, Object>();
+		globals.put("globalListado", new java.util.ArrayList<>());
+		
+		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_JAXB);
 	}
 
 
@@ -46,7 +50,10 @@ public class TestStateless {
 		List<Object> objects = new ArrayList<Object>();
 		objects.add(myObject);
 		
-		CallKie.callWSJSon(containerName, classNames, objects, sessionName);
+		HashMap<String, Object> globals = new HashMap<String, Object>();
+		globals.put("globalListado", new java.util.ArrayList<>());
+		
+		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_JSON);
 	}
 
 	@Test
@@ -59,7 +66,10 @@ public class TestStateless {
 		List<Object> objects = new ArrayList<Object>();
 		objects.add(myObject);
 		
-		CallKie.callWSXStream(containerName, classNames, objects, sessionName);
+		HashMap<String, Object> globals = new HashMap<String, Object>();
+		globals.put("globalListado", new java.util.ArrayList<>());
+		
+		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_XSTREAM);
 	}
 
 }
