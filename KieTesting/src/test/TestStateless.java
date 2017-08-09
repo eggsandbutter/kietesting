@@ -34,7 +34,7 @@ public class TestStateless {
 		objects.add(myObject);
 		
 		HashMap<String, Object> globals = new HashMap<String, Object>();
-		globals.put("globalListado", new java.util.ArrayList<>());
+		globals.put("globalList", new java.util.ArrayList<>());
 		
 		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_JAXB);
 	}
@@ -51,7 +51,7 @@ public class TestStateless {
 		objects.add(myObject);
 		
 		HashMap<String, Object> globals = new HashMap<String, Object>();
-		globals.put("globalListado", new java.util.ArrayList<>());
+		globals.put("globalList", new java.util.ArrayList<>());
 		
 		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_JSON);
 	}
@@ -67,7 +67,7 @@ public class TestStateless {
 		objects.add(myObject);
 		
 		HashMap<String, Object> globals = new HashMap<String, Object>();
-		globals.put("globalListado", new java.util.ArrayList<>());
+		globals.put("globalList", new java.util.ArrayList<>());
 		
 		CallKie.executeStateless(containerName, sessionName, classNames, objects, globals, CallKie.REST_XSTREAM);
 	}
