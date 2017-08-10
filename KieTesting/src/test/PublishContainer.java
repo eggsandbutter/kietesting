@@ -12,7 +12,7 @@ public class PublishContainer {
 		String containerName = "KieContainer";
 		String artifact = "myProject";
 		String group = "myOrganization";
-		String version = "1.0.5";
+		String version = "1.0.6";
 		
 		CallKie.publishContainer(containerName, artifact, group, version);
 	}

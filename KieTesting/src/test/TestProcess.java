@@ -15,6 +15,7 @@ public class TestProcess {
 	public void test() {
 		
 		MyObject myObject = new MyObject();
+		myObject.setMyID(2);
 		
 		List<String> classNames = new ArrayList<String>();
 		classNames.add(myObject.getClass().getName());
